@@ -52,7 +52,9 @@ ssh usuario@ip_vm_consola     # Conectar por SSH
 ```
 docker/
 ├── frontend/
-│   ├── Dockerfile.frontend
+│   ├── imagenes/
+│   └── Capturas de pantalla/
+│   └── colores.css
 │   └── index.html
 ├── backend/
 │   ├── Dockerfile.backend
