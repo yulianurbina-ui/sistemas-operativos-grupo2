@@ -1,0 +1,45 @@
+# Informe de Práctica: Despliegue, Particionamiento y Conectividad de Servidores mediante SSH
+
+## 1. Hipervisor Utilizado
+Para el desarrollo y gestión de los entornos virtuales de esta práctica se seleccionó el siguiente hipervisor:
+* **Hipervisor:** Oracle VirtualBox
+
+---
+
+## 2. Especificaciones de las Máquinas Virtuales
+
+### VM 1: Servidor con Entorno Gráfico
+* **Sistema Operativo:** Ubuntu MATE 24.04.4 LTS
+* **Memoria RAM:** 6144 MB (6 GB)
+* **Procesadores:** 3 vCPU
+* **Tamaño del Disco Virtual:** 25 GB (identificado como `sda`)
+* **Tipo de Interfaz:** Entorno gráfico completo (GUI) basado en MATE Desktop.
+
+### VM 2: Servidor de Consola
+* **Sistema Operativo:** Rocky Linux 9.8 (Blue Onyx) - Kernel `5.14.0-687.10.1.el9_8.0.1.x86_64`
+* **Memoria RAM:** 2048 MB (2 GB)
+* **Procesadores:** 2 vCPU
+* **Tamaño del Disco Virtual:** 20 GB (identificado como `sda`)
+* **Tipo de Interfaz:** Distribución de consola pura (CLI), sin interfaz gráfica instalada (Rocky Linux Minimal).
+
+---
+
+## 3. Tabla de Particionamiento Manual
+
+El almacenamiento de las máquinas virtuales se configuró utilizando un esquema de particionado manual. Para la VM de consola (Rocky Linux 9.8), se estructuraron las particiones utilizando volúmenes lógicos (LVM) sobre la base del disco estándar para garantizar la flexibilidad de los tres puntos de montaje obligatorios y la sección de arranque:
+
+| Punto de Montaje | Nombre del Dispositivo / Volumen | Tamaño Real | Descripción |
+| :--- | :--- | :--- | :--- |
+| **`/boot`** | `/dev/sda1` | 488 MB | Espacio dedicado a los archivos de arranque del sistema y núcleos (kernel). |
+| **`/` (Raíz)** | `/dev/mapper/rlm-root` | 12 GB | Almacenamiento principal del sistema operativo, binarios y librerías. |
+| **`swap`** | `/dev/mapper/rlm-swap` | 1.9 GB | Memoria de intercambio de respaldo para el sistema. |
+| **`/HOME`** | `/dev/mapper/rlm-HOME` | 5.6 GB | Directorio reservado para los datos y configuraciones personales de los usuarios. |
+
+---
+
+## 4. Configuración de Red
+
+Para permitir la comunicación directa de los sistemas, las máquinas virtuales se configuraron en un adaptador de red común. Para verificar el correcto direccionamiento IP y comprobar que la interfaz levantara en estado **UP**, se ejecutó el siguiente comando en ambos sistemas:
+
+```bash
+ip addr show
