@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo 2 - Documentación de Infraestructura Cloud</title>
+    <link rel="stylesheet" href="colores.css">
+    <script src="efectos.js"></script>
+</head>
+<body>
+    <aside>
+        <div class="brand">
+            <h1>Kube<span>Dock</span></h1>
+            <p>Grupo #2</p>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#home" class="active">🏠 Home</a></li>
+            <li><a href="#equipo">👥 Equipo</a></li>
+            <li><a href="#comp1">💻 Componente 1: VMs</a></li>
+            <li><a href="#comp2">🐋 Componente 2: Docker</a></li>
+            <li><a href="#conclusiones">🧐 Conclusiones Primera Entrega</a></li>
+        </ul>
+
+        <div class="nav-footer">
+            Sistemas Operativos 750001C<br>Universidad del Valle | 2026
+        </div>
+    </aside>
+
+    <main>
+        
+       <section id="home">
+            <span class="section-tag">Infraestructura</span>
+            <h2>Arquitecto Cloud: Entrega Parcial</h2>
+            <p>Este espacio contiene la documentación de ingeniería y las evidencias técnicas del diseño desplegado por el <strong>Grupo 2</strong>. El proyecto integra virtualización heterogénea en Linux y el desacoplamiento de capas de servicios mediante contenedores auto-gestionados.</p>
+
+            <div class="ladearriba">
+                <div class="card">
+                    <h3>VM Gráfica (Host)</h3>
+                    <p>Ubuntu MATE 24.04 LTS</p>
+                </div>
+                <div class="card">
+                    <h3>VM Servidor</h3>
+                    <p>Rocky Linux 9.4 (Consola)</p>
+                </div>
+                <div class="card">
+                    <h3>Imagen Docker Base</h3>
+                    <p>rockylinux:9</p>
+                </div>
+                <div class="card">
+                    <h3>Evaluación</h3>
+                    <p>Entrega 1</p>
+                </div>
+            </div>
+
+            <div style="background-color: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.2); border-radius: 0.75rem; padding: 1.5rem; margin: 2rem 0;">
+                <h3 style="color: var(--accent-green); margin-top: 0; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
+                    ✅ Lista de Cumplimiento — Entrega 1
+                </h3>
+                <ul style="list-style: none; margin-top: 1rem; display: grid; gap: 0.75rem; font-size: 0.95rem;">
+                    <li style="display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0;">
+                        <span style="color: var(--accent-green);">✔</span> <strong>Virtualización:</strong> VMs montadas, esquema de particiones manuales, red interna configurada y SSH operativo.
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0;">
+                        <span style="color: var(--accent-green);">✔</span> <strong>Docker Engine:</strong> Despliegue de microservicios Frontend (Nginx) y Backend (Python) vía Docker Compose.
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0;">
+                        <span style="color: var(--accent-green);">✔</span> <strong>Repositorio GitHub:</strong> Código fuente organizado (Dockerfiles, compose, index, server) con traza de commits funcionales.
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0;">
+                        <span style="color: var(--accent-green);">✔</span> <strong>Sitio Web:</strong> Despliegue público indexando de manera interactiva los Componentes 1 y 2.
+                    </li>
+                     <li style="display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0;">
+                        <span style="color: var(--accent-green);">✔</span> <strong>Slides & Sustentación:</strong> Slides organizadas de manera practica,y diagramas para mayor entendimiento del proyecto.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="files-box">
+                <h3>📦 Insumos del Proyecto (Estructura de Trabajo)</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #a5b4fc;">Estos son los archivos fuente distribuidos para el aprovisionamiento del entorno:</p>
+                <ul class="file-list">
+                    <li class="file-item">📄 README.md</li>
+                    <li class="file-item">🐳 Dockerfile_rockylinux:9</li>
+                    <li class="file-item">🐙 docker-compose.yml</li>
+                    <li class="file-item">🐍 server.py (Backend)</li>
+                    <li class="file-item">🐳 Dockerfile.Backend </li>
+                    <li class="file-item">📁 informe SSH.txt </li>
+                    <li class="file-item">🌐 index.html (Frontend)</li>
+                    <li class="file-item">🌊 colores.css (styles)</li>
+                    <li class="file-item">🟨 efectos.js </li>
+                   
+
+                </ul>
+            </div>
+        </section>
+
+        <section id="equipo">
+            <span class="section-tag">Colaboradores</span>
+            <h2>Equipo de Trabajo</h2>
+            <p>Desarrolladores de cada uno de los respectivos componentes:</p>
+            
+           <div class="grid-container">
+        <div class="card">
+            <h3>William Fernando ibargüen Rivas</h3>
+            <img class="imgtodos" src="./imagenes/william.jpeg" alt="William">
+            <p class="role" style="color: var(--text-W);">Componente 1 : Virtualización</p>
+            <p class="correo">william.ibarguen@correounivalle.edu.co</p>
+        </div>
+
+        <div class="card">
+            <h3>Nicolas Barona Bonilla</h3>
+            <img class="imgtodos" src="./imagenes/nicolashd.png" alt="Nicolas">
+            <p class="role" style="color: var(--accent-N);">Componente 2: Docker Engine</p>
+            <p class="correo">barona.nicolas@correounivalle.edu.co</p>
+        </div>
+
+        <div class="card">
+            <h3>Estevan Felipe Gómez Ojeda</h3>
+            <img class="imgtodos" src="./imagenes/estevan.png" alt="Estevan">
+            <p class="role" style="color: var(--accent-E);">Componente 3: K8s Minikube</p>
+            <p class="correo">estevan.gomez@correounivalle.edu.co</p>
+        </div>
+
+        <div class="card">
+            <h3>Yulian Felipe Urbina Cantoñi</h3>
+            <img class="imgtodos" src="./imagenes/yulian.jpg" alt="Yulian" 
+            style="width: 250px;
+            height: 333px;
+            object-fit: cover;
+            object-position: center top;">
+            <p class="role" style="color: var(--accent-Y);">Componente 4: Plataforma Web</p>
+            <p class="correo">yulian.urbina@correounivalle.edu.co</p>
+        </div>
+
+        <div class="card">
+            <h3>Alejandro Hernandez Sarria</h3>
+            <img class="imgtodos" src="./imagenes/alejohd.png" alt="Alejandro"style="
+            width: 250px;
+            height: 333px;
+            object-fit: cover;
+            object-position: center top;>
+            <p class="role" style="color: var(--accent-A);">Componente 5: Slides & Sustentación</p>
+            <p class="correo">alejandro.sarria@correounivalle.edu.co</p>
+        </div>
+    </div>
+        </section>
+       <section id="comp1">
+    <span class="section-tag" style="font-size: 18px;">Fase 1</span>
+    <h2>Componente 1: Virtualización</h2>
+    <p>Se realizó el despliegue de dos hipervisores aislados utilizando almacenamiento controlado. Ambas máquinas se interconectaron por medio de una interfaz de red interna estática.</p>
+
+    <div class="carousel-container">
+        <div class="carousel-inner" id="carouselInner">
+            
+            <div class="carousel-slide">
+              <img src="./Capturas de pantalla/w-s/1.jpeg" alt="Particionamiento Manual" onclick="openCarouselZoom(this)">
+                
+                <div class="carousel-caption">Evidencia 1.1: Verificación estructural del disco mapeado con particionado manual (VM Consola).</div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="./Capturas de pantalla/w-grafica/mate.jpeg" alt="Particionamiento Ubuntu MATE" onclick="openCarouselZoom(this)">
+                <div class="carousel-caption">Evidencia 1.2: Particionamiento local de la máquina gráfica (Ubuntu MATE).</div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="./Capturas de pantalla/w-s/2.jpeg" alt="Verificación Particiones"  onclick="openCarouselZoom(this)">
+                <div class="carousel-caption">Evidencia 1.3: Verificación de Particiones Activas en Producción.</div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="./Capturas de pantalla/w-s/4.jpeg" alt="Configuración Firewall"  onclick="openCarouselZoom(this)">
+                <div class="carousel-caption">Evidencia 1.4: Configuración de Firewall para Servicio SSH.</div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="./Capturas de pantalla/w-s/5.jpeg" alt="Red Interna"  onclick="openCarouselZoom(this)">
+                <div class="carousel-caption">Evidencia 1.5: Configuración y Verificación de Red Interna.</div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="./Capturas de pantalla/w-grafica/10.jpeg" alt="Conexión SSH"  onclick="openCarouselZoom(this)">
+                <div class="carousel-caption">Evidencia 1.6: Túnel seguro SSH activo y autenticado en puerto 22.</div>
+            </div>
+
+        </div>
+        
+<button class="carousel-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+<button class="carousel-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+    </div>
+
+    <h3>Comandos obligatorios de Verificación ejecutados</h3>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="terminal-dots"><div class="dot dot-1"></div><div class="dot dot-2"></div><div class="dot dot-3"></div></div>
+            <span class="terminal-title">bash - VM Consola</span>
+            <button class="copy-btn" onclick="copyText('cmd-vms')">Copiar</button>
+        </div>
+        <div class="terminal-body">
+            <pre id="cmd-vms"># Comprobación de la distribución instalada
+cat /etc/os-release
+
+# Análisis del espacio y esquema de particiones manuales
+lsblk
+
+# Configuración de interfaces y asignación de IPs
+ip a
+
+# Conectividad de red interna cruzada (Ping hacia el nodo adyacente)
+ping -c 4 [IP_VM_OBJETIVO]</pre>
+        </div>
+    </div>
+</section>
+        <section id="comp2">
+            <span class="section-tag" style="font-size: 18px;">Fase 2</span>
+            <h2>Componente 2: Aislamiento por Contenedores Docker</h2>
+            <p>Instalación nativa de <strong>Docker Engine</strong> en Ubuntu MATE. Se tomaron los archivos base proveídos (`Dockerfile_fedora_rocky_alma_ACTUALIZADO`) y se segmentaron en dos entornos independientes fundamentados en la imagen <code>rockylinux:9</code>.</p>
+
+            <h3>Orquestación de Capas: Frontend y Backend</h3>
+            <p>Utilizando el script del backend en Python (<code>server.py</code> en puerto 5000) y el servidor Nginx, se vinculó el archivo <code>docker-compose.yml</code> configurando volúmenes de persistencia.</p>
+
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots"><div class="dot dot-1"></div><div class="dot dot-2"></div><div class="dot dot-3"></div></div>
+                    <span class="terminal-title">bash - Docker Engine</span>
+                    <button class="copy-btn" onclick="copyText('cmd-docker')">Copiar</button>
+                </div>
+                <div class="terminal-body">
+                    <pre id="cmd-docker"># Desplegar los servicios en segundo plano (Modo Detached)
+docker compose up -d
+
+# Validar el ciclo de vida y puertos expuestos de los contenedores
+docker ps
+
+# Diagnóstico de respuestas HTTP locales
+curl http://localhost
+curl http://localhost:5000</pre>
+                </div>
+            </div>
+
+            <h3>Instalacion de Docker Engine - Ubuntu Mate - ( VMWARE ) </h3>
+            <div class="carousel-container" data-slide="0">
+    <div class="carousel-inner">
+        
+        <div class="carousel-slide">
+            <img src="../../ruta/a/tu/nueva-imagen1.jpeg" alt="Título Imagen 1" onclick="openCarouselZoom(this)">
+            <div class="carousel-caption">Evidencia X.1: Descripción de lo que se ve en la imagen.</div>
+        </div>
+        
+        <div class="carousel-slide">
+            <img src="../../ruta/a/tu/nueva-imagen2.jpeg" alt="Título Imagen 2" onclick="openCarouselZoom(this)">
+            <div class="carousel-caption">Evidencia X.2: Descripción de la segunda imagen.</div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="../../ruta/a/tu/nueva-imagen3.jpeg" alt="Título Imagen 3" onclick="openCarouselZoom(this)">
+            <div class="carousel-caption">Evidencia X.3: Descripción de la tercera imagen.</div>
+        </div>
+        </div>
+    
+    <button class="carousel-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+    <button class="carousel-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+</div>
+
+        </section>
+        
+<section id="conclusiones" >
+    <h2 style="color: var(--text-title); border-bottom: 2px solid var(--border-color); padding-bottom: 10px;">Conclusiones  (Entrega 1)</h2>
+    
+    <div class="conclusion-block" style="margin-top: 20px;">
+        <h3 style="color: var(--text-highlight); margin-bottom: 8px;">💡 Aprendizajes Obtenidos</h3>
+        <p style="line-height: 1.6; text-align: justify;">
+            Durante esta primera fase, el equipo logró consolidar la administración de sistemas Linux mediante el particionamiento manual avanzado (<code style="background-color: var(--code-bg); padding: 2px 6px; border-radius: 4px;">/</code>, <code style="background-color: var(--code-bg); padding: 2px 6px; border-radius: 4px;">swap</code>, <code style="background-color: var(--code-bg); padding: 2px 6px; border-radius: 4px;">/home</code>), garantizando el aislamiento de datos y optimización de recursos. Asimismo, se comprendió el ciclo de vida de la contenerización al construir imágenes eficientes desde cero con Docker Engine, y la importancia de la automatización multi-contenedor usando Docker Compose para el despliegue ordenado de arquitecturas de software.
+        </p>
+    </div>
+
+    <div class="conclusion-block" style="margin-top: 20px;">
+        <h3 style="color: var(--accent-green); margin-bottom: 8px;">⚠️ Dificultades y Retos Superados</h3>
+        <p style="line-height: 1.6; text-align: justify;">
+         Una de las mayores dificultades que se afronto en esta primera entrega, es el manejo de linux,
+         que para muchos de los integrantes del equipo, a la hora de la  instalacion y realizacion de su respectivo componente, 
+         no se tenia tanto conocimiento para la movilidad en dicho Sistema Operativo, otra de ellas fueron la asignación de IPs 
+         estáticas y permisos en el servicio SSH para asegurar una comunicación aislada pero funcional.
+        </p>
+    </div>
+
+    <div class="conclusion-block" style="margin-top: 20px;">
+        <h3 style="color: var(--text-W); margin-bottom: 8px;">🚀 Recomendaciones para la Siguiente Fase</h3>
+        <p style="line-height: 1.6; text-align: justify;">
+           </p>
+    </div>
+</section>
+    </main>
+
+    <div id="modalContainer" class="zoom-modal" onclick="closeZoom()">
+        <span class="close-modal">&times;</span>
+        <img id="modalTarget" src="" alt="Zoom">
+    </div>
+    <script>
+          const modal = document.getElementById('modalContainer');
+        const modalImg = document.getElementById('modalTarget');
+
+        function zoomImage(container) {
+            const srcImg = container.querySelector('img').src;
+            modal.style.display = 'flex';
+            modalImg.src = srcImg;
+        }
+
+        function closeZoom() {
+            modal.style.display = 'none';
+        }
+
+
+
+        
+    </script>
+</body>
+</html>
