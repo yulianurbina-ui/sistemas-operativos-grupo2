@@ -105,7 +105,7 @@ minikube service nginx --url
 
 ## Componente 4: Sitio Web de Documentación
 
-**URL del sitio:** https://yulianurbina-ui.github.io/sistemas-operativos-grupo2/Docker/frontend/  
+**URL del sitio:** https://yulianurbina-ui.github.io/sistemas-operativos-grupo2/ 
 **Video YouTube:** https://youtu.be/jRbws429uF0
 
 ### Secciones del sitio
