@@ -119,7 +119,62 @@ minikube service nginx --url
 
 ## Diagrama de Arquitectura
 
-> Insertar imagen del diagrama (draw.io / Miro / Lucidchart)
+## Diagrama de Arquitectura
+
+El siguiente esquema técnico detalla la infraestructura cloud implementada, la interconexión de entornos virtuales, el flujo de servicios contenedorizados y la capa de orquestación final para el Grupo 2:
+
+```text
+=============================================================================================
+                                INFRAESTRUCTURA GENERAL (GRUPO 2)
+=============================================================================================
+
+ [ HOST FISCO ] (Windows ) --- Ejecuta VirtualBox/VMware
+        |
+        +=======> [ VM 1: LINUX GRÁFICO ] (Ubuntu MATE 24.04 LTS) 
+        |                | (IP: Red Interna / Adaptador Puente)
+        |                |
+        |                +--- [ CLIENTE SSH ] ------------------------------+
+        |                                                                   |
+        +=======> [ VM 2: LINUX CONSOLA ] (Rocky Linux 9.4)                 | (Conexión Segura)
+                         |                                                  | (Puerto 22)
+                         +--- [ SERVIDOR SSH ] <============================+
+                         |
+                         +--- [ PARTICIONAMIENTO MANUAL ] (/, swap, /home)
+
+=============================================================================================
+                         COMPONENTE 2: ENTORNOS EN CONTENEDORES (DOCKER)
+=============================================================================================
+
+ [ UBUNTU MATE 24.04 ] (Entorno de Ejecución)
+        |
+   [ DOCKER ENGINE ] (Sin Desktop)
+        |
+        +---> [ DOCKER COMPOSE ] (Orquestación Local via docker-compose.yml)
+                     |
+                     +===> [ CONTENEDOR: FRONTEND ] (nginx:alpine)
+                     |            |--- Puerto Externo: 8080
+                     |            |--- Volumen Persistente: ./frontend -> /usr/share/nginx/html
+                     |
+                     +===> [ CONTENEDOR: BACKEND ] (Base: rockylinux:9)
+                                  |--- Puerto Externo: 5000
+                                  |--- Runtime: Python 3 (server.py)
+
+=============================================================================================
+                        COMPONENTE 3: ORQUESTACIÓN CON KUBERNETES
+=============================================================================================
+
+ [ UBUNTU MATE 24.04 ] (Entorno de Ejecución)
+        |
+   [ MINIKUBE CLUSTER ] (Single-Node)
+        |
+        +---> [ MANIFIESTO: deployment.yaml ] 
+        |            |
+        |            +---> [ REPLICAS: 3 PODS ] (Nginx Oficial / Escalado Manual)
+        |                     [ Pod 1 ]   [ Pod 2 ]   [ Pod 3 ]
+        |
+        +---> [ MANIFIESTO: service.yaml ]
+                     |
+                     +---> [ SERVICIO: NODEPORT ] (Acceso Externo del Sistema)
 
 ---
 ## Componente 5: Conclusiones
