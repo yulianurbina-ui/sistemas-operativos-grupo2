@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo 2 - Documentación de Infraestructura Cloud</title>
+    <link rel="stylesheet" href="colores.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<body>
+    <aside>
+        <div class="brand">
+            <h1>Kube<span>Dock</span></h1>
+            <p>Grupo #2</p>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#home" class="active">🏠 Home</a></li>
+            <li><a href="#creditos">©️ Recursos Externos</a></li>
+            <li><a href="#equipo">👥 Equipo</a></li>
+            <li><a href="#comp1">💻 Componente 1: VMs</a></li>
+            <li><a href="#comp2">🐋 Componente 2: Docker</a></li>
+            <li><a href="#comp3">☸️ Componente 3: Kubernetes</a></li>
+            <li><a href="#comp4">🔗 Componente 4: Pagina Web</a></li>
+            <li><a href="#comp5">🖼️ Componente 5: Slides</a></li>
+            <li><a href="#conclusiones">🧐 Conclusiones</a></li>
+            
+        </ul> 
+
+        <div class="nav-footer">
+            Sistemas Operativos 750001C<br>Universidad del Valle | 2026
+        </div>
+    </aside>
+
+    <main>
+        
+       <section id="home">
+            <span class="section-tag">Infraestructura</span>
+            <h2>Arquitecto Cloud: Entrega Parcial</h2>
+            <p>Este espacio contiene la documentación de ingeniería y las evidencias técnicas del diseño desplegado por el <strong>Grupo 2</strong>. El proyecto integra virtualización heterogénea en Linux y el desacoplamiento de capas de servicios mediante contenedores auto-gestionados.</p>
+
+            <div class="ladearriba">
+                <div class="card">
+                    <h3>VM Gráfica (Host)</h3>
+                    <p>Ubuntu MATE 24.04 LTS</p>
+                </div>
+                <div class="card">
+                    <h3>VM Servidor</h3>
+                    <p>Rocky Linux 9.4 (Consola)</p>
+                </div>
+                <div class="card">
+                    <h3>Imagen Docker Base</h3>
+                    <p>rockylinux:9</p>
+                </div>
+                <div class="card">
+                    <h3>Evaluación</h3>
+                    <p>Proyecto Final</p>
+                </div>
+            </div>
+
+            <div style="background-color: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.2); border-radius: 0.75rem; padding: 1.5rem; margin: 2rem 0;">
+                <h3 style="color: var(--accent-green); margin-top: 0; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
+                    ✅ Lista de Cumplimiento — Entrega 1
+                </h3>
+                <ul style="list-style: none; margin-top: 1rem; display: grid; gap: 0.75rem; font-size: 0.95rem;">
+                    
+                    <li style="display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0;">
+                        <span style="color: var(--accent-green);">✔</span> <strong>Virtualización:</strong> VMs montadas, esquema de particiones manuales, red interna configurada y SSH operativo.
+                    </li>
+
+                    <li style="display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0;">
+                        <span style="color: var(--accent-green);">✔</span> <strong>Docker Engine:</strong> Despliegue de microservicios Frontend (Nginx) y Backend (Python) vía Docker Compose.
+                    </li>
+
+                    <li style="display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0;">
+                        <span style="color: var(--accent-green);">✔</span> <strong>Repositorio GitHub:</strong> Código fuente organizado con traza de commits de todos los integrantes del grupo.
+                    </li>
+
+                    <li style="display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0;">
+                        <span style="color: var(--accent-green);">✔</span> <strong>Sitio Web:</strong> Despliegue público indexando de manera interactiva los Componentes 1 y 2.
+                    </li>
+
+                    <li style="display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0;">
+                        <span style="color: var(--accent-green);">✔</span> <strong>Video Demostrativo:</strong> Sustentación subida a YouTube evidenciando los sistemas operando en tiempo real.
+                    </li>
+
+                     <li style="display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0;">
+                        <span style="color: var(--accent-green);">✔</span> <strong>Slides & Sustentación:</strong> Slides organizadas de manera practica,y diagramas para mayor entendimiento del proyecto.
+                    </li>
+
+                      <li style="display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0;">
+                        <span style="color: var(--accent-green);"></span> <strong style="padding-left: 370px;margin-top: 25px;">  Estado de la Entrega: Finalizado</strong> 
+                    </li>
+
+                  
+                </ul>
+            </div>
+
+            <div class="files-box">
+                <h3>📦 Insumos del Proyecto (Estructura de Trabajo)</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #a5b4fc;">Estos son los archivos fuente distribuidos para el aprovisionamiento del entorno:</p>
+                <ul class="file-list">
+                    <li class="file-item">📄 README.md</li>
+                    <li class="file-item">🐳 Dockerfile_rockylinux:9</li>
+                    <li class="file-item">🐙 docker-compose.yml</li>
+                    <li class="file-item">🐍 server.py (Backend)</li>
+                    <li class="file-item">🐳 Dockerfile.Backend </li>
+                    <li class="file-item">📁 informe SSH.txt </li>
+                    <li class="file-item">🌐 index.html (Frontend)</li>
+                    <li class="file-item">🌊 colores.css (styles)</li>
+                    <li class="file-item">🟨 efectos.js </li>
+                   
+
+                </ul>
+            </div>
+        </section>
+
+<section id="creditos" class="creditos-section">
+    <span class="section-tag">Agradecimientos Open Source</span>
+    <h2>Créditos y Recursos Externos</h2>
+    <p>Este proyecto web fue construido integrando codigo propio desde 0 , pero a su vex con ayuda de diferentes entes y recursos de la comunidad de desarrolladores web, se les da el credito correspondiente a:</p>
+
+    <div class="creditos-grid">
+        <div class="credito-card">
+            <h4> Carousel </h4>
+            <p><strong>Uso:</strong> Se modifico este carrousel , sacado directamente de la pagina de Code pen , y se modifico adaptandolo para las partes de <span style="color: aqua;">Evidencia en cada componente </span></p>
+            <p><strong>Autor / Fuente:</strong> We the Collective | <a href="https://codepen.io/team/wtc/pen/raWNYzx" target="_blank">Codigo Extraido </a></p>
+        </div>
+
+        <div class="credito-card">
+            <h4>Carousel - Conclusiones</h4>
+            <p><strong>Uso:</strong> Este codigo se saco directamente desde la pagina de CodePen, y se adapto a la pagina para las <a href="#conclusiones">Conclusiones </a>de cada integrante del grupo.</p>
+            <p><strong>Autor / Fuente:</strong> OpenJS Foundation | <a href="https://codepen.io/shweba-sheikh/pen/JjxKbyx" target="_blank">Codigo Extraido</a></p>
+        </div>
+
+        <div class="credito-card">
+            <h4>Gemini (Google AI)</h4>
+            <p><strong>Uso:</strong> Copiloto de desarrollo para la adaptación de código (HTML/CSS/JS), redacción de textos formales y Errores.</p>
+            <p><strong>Autor / Fuente:</strong> Google | <a href="https://gemini.google.com/" target="_blank">gemini.google.com</a></p>
+        </div>
+    </div>
+</section>
+
+        <section id="equipo">
+            <span class="section-tag">Colaboradores</span>
+            <h2>Equipo de Trabajo</h2>
+            <p>Desarrolladores de cada uno de los respectivos componentes:</p>
+            
+           <div class="grid-container">
+        <div class="card">
+            <h3>William Fernando ibargüen Rivas</h3>
+            <img class="imgtodos" src="./imagenes/william.jpeg" alt="William">
+            <p class="role" style="color: var(--text-W);">Componente 1 : Virtualización</p>
+            <p class="correo">william.ibarguen@correounivalle.edu.co</p>
+        </div>
+
+        <div class="card">
+            <h3>Nicolas Barona Bonilla</h3>
+            <img class="imgtodos" src="./imagenes/nicolashd.png" alt="Nicolas">
+            <p class="role" style="color: var(--accent-N);">Componente 2: Docker Engine</p>
+            <p class="correo">barona.nicolas@correounivalle.edu.co</p>
+        </div>
+
+        <div class="card">
+            <h3>Estevan Felipe Gómez Ojeda</h3>
+            <img class="imgtodos" src="./imagenes/estevan.png" alt="Estevan">
+            <p class="role" style="color: var(--accent-E);">Componente 3: K8s Minikube</p>
+            <p class="correo">estevan.gomez@correounivalle.edu.co</p>
+        </div>
+
+        <div class="card">
+            <h3>Yulian Felipe Urbina Cantoñi</h3>
+            <img class="imgtodos" src="./imagenes/yulian.jpg" alt="Yulian" 
+            style="width: 250px;
+            height: 333px;
+            object-fit: cover;
+            object-position: center top;">
+            <p class="role" style="color: var(--accent-Y);">Componente 4: Plataforma Web</p>
+            <p class="correo">yulian.urbina@correounivalle.edu.co</p>
+        </div>
+
+        <div class="card">
+            <h3>Alejandro Hernandez Sarria</h3>
+            <img class="imgtodos" src="./imagenes/alejohd.png" alt="Alejandro"style="
+            width: 250px;
+            height: 333px;
+            object-fit: cover;
+            object-position: center top;>
+            <p class="role" style="color: var(--accent-A);">Componente 5: Slides & Sustentación</p>
+            <p class="correo">alejandro.sarria@correounivalle.edu.co</p>
+        </div>
+    </div>
+        </section>
+       <section id="comp1">
+    <span class="section-tag" style="font-size: 18px;">Fase 1</span>
+    <h2>Componente 1: Virtualización</h2>
+    <p>Se realizó el despliegue de dos hipervisores aislados utilizando almacenamiento controlado. Ambas máquinas se interconectaron por medio de una interfaz de red interna estática.</p>
+
+    <div class="carousel-container">
+        <div class="carousel-inner" id="carouselInner">
+            
+            <div class="carousel-slide">
+              <img src="./Capturas de pantalla/w-s/1.jpeg" alt="Particionamiento Manual" onclick="openCarouselZoom(this)">
+                
+                <div class="carousel-caption">Evidencia 1.1: Verificación estructural del disco mapeado con particionado manual (VM Consola).</div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="./Capturas de pantalla/w-grafica/mate.jpeg" alt="Particionamiento Ubuntu MATE" onclick="openCarouselZoom(this)">
+                <div class="carousel-caption">Evidencia 1.2: Particionamiento local de la máquina gráfica (Ubuntu MATE).</div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="./Capturas de pantalla/w-s/2.jpeg" alt="Verificación Particiones"  onclick="openCarouselZoom(this)">
+                <div class="carousel-caption">Evidencia 1.3: Verificación de Particiones Activas en Producción.</div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="./Capturas de pantalla/w-s/4.jpeg" alt="Configuración Firewall"  onclick="openCarouselZoom(this)">
+                <div class="carousel-caption">Evidencia 1.4: Configuración de Firewall para Servicio SSH.</div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="./Capturas de pantalla/w-s/5.jpeg" alt="Red Interna"  onclick="openCarouselZoom(this)">
+                <div class="carousel-caption">Evidencia 1.5: Configuración y Verificación de Red Interna.</div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="./Capturas de pantalla/w-grafica/10.jpeg" alt="Conexión SSH"  onclick="openCarouselZoom(this)">
+                <div class="carousel-caption">Evidencia 1.6: Túnel seguro SSH activo y autenticado en puerto 22.</div>
+            </div>
+
+        </div>
+        
+<button class="carousel-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+<button class="carousel-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+    </div>
+
+    <h3>Comandos obligatorios de Verificación ejecutados</h3>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="terminal-dots"><div class="dot dot-1"></div><div class="dot dot-2"></div><div class="dot dot-3"></div></div>
+            <span class="terminal-title">bash - VM Consola</span>
+            <button class="copy-btn" onclick="copyText('cmd-vms')">Copiar</button>
+        </div>
+        <div class="terminal-body">
+            <pre id="cmd-vms"># Comprobación de la distribución instalada
+cat /etc/os-release
+
+# Análisis del espacio y esquema de particiones manuales
+lsblk
+
+# Configuración de interfaces y asignación de IPs
+ip a
+
+# Conectividad de red interna cruzada (Ping hacia el nodo adyacente)
+ping -c 4 [IP_VM_OBJETIVO]</pre>
+        </div>
+    </div>
+</section>
+        <section id="comp2">
+            <span class="section-tag" style="font-size: 18px;">Fase 2</span>
+            <h2>Componente 2: Aislamiento por Contenedores Docker</h2>
+            <p>Instalación nativa de <strong>Docker Engine</strong> en Ubuntu MATE. Se tomaron los archivos base proveídos (`Dockerfile_fedora_rocky_alma_ACTUALIZADO`) y se segmentaron en dos entornos independientes fundamentados en la imagen <code>rockylinux:9</code>.</p>
+
+            <h3>Orquestación de Capas: Frontend y Backend</h3>
+            <p>Utilizando el script del backend en Python (<code>server.py</code> en puerto 5000) y el servidor Nginx, se vinculó el archivo <code>docker-compose.yml</code> configurando volúmenes de persistencia.</p>
+
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots"><div class="dot dot-1"></div><div class="dot dot-2"></div><div class="dot dot-3"></div></div>
+                    <span class="terminal-title">bash - Docker Engine</span>
+                    <button class="copy-btn" onclick="copyText('cmd-docker')">Copiar</button>
+                </div>
+                <div class="terminal-body">
+                    <pre id="cmd-docker"># Desplegar los servicios en segundo plano (Modo Detached)
+docker compose up -d
+
+# Validar el ciclo de vida y puertos expuestos de los contenedores
+docker ps
+
+# Diagnóstico de respuestas HTTP locales
+curl http://localhost
+curl http://localhost:5000</pre>
+                </div>
+            </div>
+
+            <h3>Instalacion de Docker Engine - Ubuntu Mate - ( VMWARE ) </h3>
+            <div class="carousel-container" data-slide="0">
+    <div class="carousel-inner">
+        
+        <div class="carousel-slide">
+            <img src="./Capturas de pantalla/build.png" alt="Título Imagen 1" onclick="openCarouselZoom(this)">
+            <div class="carousel-caption">Evidencia 2.1: Construcción y levantamiento de servicios vía Docker Compose.</div>
+        </div>
+        
+        <div class="carousel-slide">
+            <img src="./Capturas de pantalla/backend.png" alt="Título Imagen 2" onclick="openCarouselZoom(this)">
+            <div class="carousel-caption">Evidencia 2.2: Despliegue exitoso del microservicio Backend (Python en puerto 5000)</div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="./Capturas de pantalla/frontend.png" alt="Título Imagen 3" onclick="openCarouselZoom(this)">
+            <div class="carousel-caption">Evidencia 2.3: Accesibilidad y ruteo del microservicio Frontend (Nginx en puerto 8080)</div>
+        </div>
+        </div>
+    
+    <button class="carousel-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+    <button class="carousel-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+</div>
+
+        </section>
+        
+        <section id="comp3">
+            <span class="section-tag" style="font-size: 18px;">Fase 3</span>
+            <h2>Componente 3: Kubernetes</h2>
+            <p>Se implementó un cluster local de Kubernetes 
+                usando<strong>Minikube</strong> obre una máquina virtual Ubuntu. 
+                Se desplegó un servidor web Nginx mediante manifiestos YAML,  se expuso el servicio con NodePort y 
+            se demostró el escalado manual de réplicas.</p>
+
+           <div class="carousel-container" data-slide="0">
+    <div class="carousel-inner">
+        
+        <div class="carousel-slide">
+            <img src="./Capturas de pantalla/minikube version.jpeg" alt="Versiones Minikube" onclick="openCarouselZoom(this)">
+            <div class="carousel-caption">Evidencia 3.1: Verificación de entorno e instalación de Minikube y Kubectl.</div>
+        </div>
+        
+        <div class="carousel-slide">
+            <img src="./Capturas de pantalla/kubectl.jpeg" alt="Despliegue YAML" onclick="openCarouselZoom(this)">
+            <div class="carousel-caption">Evidencia 3.2: Despliegue de manifiestos YAML y verificación de las 2 réplicas iniciales.</div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="./Capturas de pantalla/nginx.jpeg" alt="Nginx Browser" onclick="openCarouselZoom(this)">
+            <div class="carousel-caption">Evidencia 3.3: Acceso web exitoso al servicio Nginx expuesto por NodePort.</div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="./Capturas de pantalla/kubectl.jpeg" alt="Scale Replicas" onclick="openCarouselZoom(this)">
+            <div class="carousel-caption">Evidencia 3.4: Escalado horizontal dinámico de 2 a 3 réplicas sin tiempo de inactividad.</div>
+        </div>
+
+    </div>
+    
+    <button class="carousel-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+    <button class="carousel-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+</div>
+
+ <section id="comp4">
+            <span class="section-tag" style="font-size: 18px;">Fase 4</span>
+            <h2>Componente 4: Sitio Web - Video Youtube</h2>
+            <a href="https://youtu.be/jRbws429uF0" style="color: aqua; " target="_blank " ><p>Video Demostrativo en la plataforma de YouTube.</p></a>
+</div>
+
+ <section id="comp5">
+    <span class="section-tag" style="font-size: 18px;">Fase 5</span>
+    <h2>Componente 5: Presentación / Slides</h2>
+    <p>En esta parte, se encuentra la presentación realizada en PowerPoint para la sustentación final de la arquitectura del proyecto.</p>
+    
+    <div style="margin-top: 25px;">
+        <a style="color: aqua;" href="ruta/a/tu/archivo.pptx" download="Presentacion_KubeDock_Grupo2.pptx" class="btn-descarga">
+            📄 Descargar Presentación (PPTX)
+        </a>
+    </div>
+</section>
+
+<section id="conclusiones" class="gtco-testimonials">
+  <h2>Nuestro Equipo de Arquitectos Cloud</h2>
+  <div class="owl-carousel owl-carousel1 owl-theme">
+    
+    <div>
+      <div class="card text-center"><img class="card-img-top" src="./imagenes/william.jpeg" alt="William">
+        <div class="card-body">
+          <h5>William F. Ibargüen<br />
+            <span> C1: Virtualización </span>
+          </h5>
+          <p class="card-text">"El laboratorio demostró con éxito la ventaja técnica de separar las particiones de datos (/home) de las del sistema (/) para garantizar la seguridad de la información. Asimismo, comprobó la alta eficiencia de los sistemas de servidor basados puramente en consola al ahorrar recursos de hardware (RAM y CPU), y
+ la viabilidad de administrarlos de 
+ forma 100% remota y segura a través de una red"</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card text-center"><img class="card-img-top" src="./imagenes/nicolashd.png" alt="Nicolas">
+        <div class="card-body">
+          <h5>Nicolas Barona<br />
+            <span> C2: Docker Engine </span>
+          </h5>
+          <p class="card-text">"La transición de máquinas virtuales a contenedores fue un punto de inflexión en el proyecto. Trabajar la orquestación con Docker Compose me permitió entender en la práctica cómo el desacoplamiento de microservicios (Nginx y Python) 
+            optimiza drásticamente los recursos del host y agiliza los despliegues"</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card text-center"><img class="card-img-top" src="./imagenes/estevan.png" alt="Estevan">
+        <div class="card-body">
+          <h5>Estevan F. Gómez<br />
+            <span> C3: K8s Minikube </span>
+          </h5>
+          <p class="card-text">"Orquestar servicios con Kubernetes cambió mi perspectiva sobre la alta disponibilidad. Implementar Minikube y ver en tiempo real cómo el clúster es capaz de escalar réplicas dinámicamente usando 
+            manifiestos declarativos YAML evidencia el verdadero poder del Cloud Computing"</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card text-center"><img class="card-img-top" src="./imagenes/yulian.jpg" alt="Yulian">
+        <div class="card-body">
+          <h5>Yulian F. Urbina<br />
+            <span> C4: Plataforma Web </span>
+          </h5>
+          <p class="card-text">"Desarrollar esta plataforma web fue 
+            el reto definitivo de integración. No solo se 
+            trató de estructurar el código (HTML, CSS y JavaScript) 
+            para lograr una interfaz limpia e interactiva, sino de 
+            comprender a fondo el trabajo de mis compañeros —desde 
+            la virtualización hasta Kubernetes— para documentarlo y 
+            presentarlo de forma coherente."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card text-center"><img class="card-img-top" src="./imagenes/alejohd.png" alt="Alejandro">
+        <div class="card-body">
+          <h5>Alejandro Hernandez<br />
+            <span> C5: Sustentación </span>
+          </h5>
+          <p class="card-text">"El desafío de sintetizar una arquitectura heterogénea en una estructura comprensible me enseñó que la ejecución técnica debe ir obligatoriamente de la mano con una comunicación asertiva. Un buen diseño arquitectónico 
+            pierde valor si no se sabe defender y explicar ante un cliente o equipo"</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+    </main>
+
+    <div id="modalContainer" class="zoom-modal" onclick="closeZoom()">
+        <span class="close-modal">&times;</span>
+        <img id="modalTarget" src="" alt="Zoom">
+    </div>
+    <script>
+          const modal = document.getElementById('modalContainer');
+        const modalImg = document.getElementById('modalTarget');
+
+        function zoomImage(container) {
+            const srcImg = container.querySelector('img').src;
+            modal.style.display = 'flex';
+            modalImg.src = srcImg;
+        }
+
+        function closeZoom() {
+            modal.style.display = 'none';
+        }
+
+
+            /* ================= INICIO JS CARRUSEL EQUIPO ================= */
+$(document).ready(function () {
+  $(".owl-carousel1").owlCarousel({
+    loop: true,
+    center: true,
+    margin: 0,
+    responsiveClass: true,
+    nav: false,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false
+      },
+      680: {
+        items: 2,
+        nav: false,
+        loop: false
+      },
+      1000: {
+        items: 3,
+        nav: true
+      }
+    }
+  });
+});
+/* ================= FIN JS CARRUSEL EQUIPO ================= */
+
+        
+    </script>
+    <script src="efectos.js"></script>
+</body>
+</html>
